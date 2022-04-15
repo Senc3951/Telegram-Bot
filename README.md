@@ -8,7 +8,7 @@ You can Send messages, locations, files, audio files, pictures.
 You need to create a bot using the BotFather in Telegram and get your API token.
 Look at the code below, and paste your token in there.
 
-You also need to install: Telegram.Bot + Telegram.Bot.Extensions.Polling using the Nuget package manager.
+You also need to install: Telegram.Bot + Telegram.Bot.Extensions.Polling + Newtonsoft.Json using the Nuget package manager.
 
 Notice that the namespace is called TelegramRat because at first, I created this project to create a RAT, but the infrastructure for a bot is the same.
 
