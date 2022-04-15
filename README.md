@@ -3,6 +3,7 @@ An extremely simple yet useful and easy-to-use Bot for Telegram using the Telegr
 The bot uses asynchronous programming and will execute the pending tasks efficiently by using a Queue.
 
 You can Send messages, locations, files, audio files, pictures.
+According to the Telegram API, the Max size of any file you wish to send is 50MB.
 
 # Set up
 You need to create a bot using the BotFather in Telegram and get your API token.
@@ -66,3 +67,5 @@ namespace TelegramRat
 ```
 
 #### Notice that when we call SendAsync we are not actually awaiting it, that's because all we do in those functions, is add an asynchronous task to the Queue and when the task is first in line, the task is being awaited.
+
+#### By doing this, we are not blocking the program if from some reason, it takes a lot of time to execute the task (Eg. Send a 50 MB file).
