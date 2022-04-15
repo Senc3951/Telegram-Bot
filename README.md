@@ -11,7 +11,7 @@ Look at the code below, and paste your token in there.
 Notice that the namespace is called TelegramRat because at first, I created this project to create a RAT, but the infrastructure for a bot is the same.
 
 # Example
-```
+```c#
 using System;
 using System.Threading.Tasks;
 
