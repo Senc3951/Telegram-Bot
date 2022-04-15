@@ -4,6 +4,12 @@ The bot uses asynchronous programming and will execute the pending tasks efficie
 
 You can Send messages, locations, files, audio files, pictures.
 
+# Set up
+You need to create a bot using the BotFather in Telegram and get your API token.
+Look at the code below, and paste your token in there.
+
+Notice that the namespace is called TelegramRat because at first, I created this project to create a RAT, but the infrastructure for a bot is the same.
+
 # Example
 ```
 using System;
@@ -36,6 +42,8 @@ namespace TelegramRat
                 Console.WriteLine($"{message} from {username}");
                 if (message == "/disconnect")
                     await Disconnect();
+                    
+                networkManager.SendMessageAsync($"Received your message: {message}");
             });
         }
         
