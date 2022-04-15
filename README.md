@@ -65,4 +65,4 @@ namespace TelegramRat
 }
 ```
 
-#### Notice that when we call SendAsync we are not actually awaiting it, that's because all we do in those functions, is add a asynchronous task to the Queue and when it is our turn, the task is being awaited.
+#### Notice that when we call SendAsync we are not actually awaiting it, that's because all we do in those functions, is add an asynchronous task to the Queue and when the task is first in line, the task is being awaited.
