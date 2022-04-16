@@ -15,7 +15,7 @@ You also need to install: Telegram.Bot + Telegram.Bot.Extensions.Polling + Newto
 Notice that the namespace is called TelegramRat because at first, I created this project to create a RAT, but the infrastructure for a bot is the same.
 
 # Example
-```c#
+```csharp
 using System;
 using System.Threading.Tasks;
 
