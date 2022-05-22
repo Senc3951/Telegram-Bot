@@ -35,20 +35,16 @@ namespace TelegramRat
             while (true) { }
         }
 
-        private static void OnReceived(string username, string message)
+        private static async void OnReceived(string username, string message)
         {
             if (string.IsNullOrWhiteSpace(message))
                 return;
             
-            //Using a Task because we can't have the OnReceived method to be asynchronous.
-            Task.Factory.StartNew(async () =>
-            {
-                Console.WriteLine($"{message} from {username}");
-                if (message == "/disconnect")
-                    await Disconnect();
-                    
-                networkManager.SendMessageAsync($"Received your message: {message}");
-            });
+            Console.WriteLine($"{message} from {username}");
+            if (message == "/disconnect")
+                await Disconnect();
+
+            networkManager.SendMessageAsync($"Received your message: {message}");
         }
         
         private static void OnError(Exception exception)
